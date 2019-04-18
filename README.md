@@ -1,2 +1,2 @@
 # TareasParaRCE
-REpositoria cambiante que estoy uytilizando para dar clases.
+Repositorio cambiante que estoy uytilizando para dar clases.
