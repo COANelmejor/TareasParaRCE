@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Cambiar color con JS</title>
+    <link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous">
+  </head>
+  <body >
+    <h1 id="titulo" class="text-center">Cambiar color con JS</h1>
+    <p id="parrafo" class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quis, assumenda.<br>
+      Debitis nam doloribus libero assumenda aut odio.<br>
+      Omnis placeat sint, expedita nulla non reprehenderit nobis ut, ex accusamus debitis!</p>
+      <div class="text-center">
+        <input
+        class="text-center"
+        type="text"
+        name=""
+        id="color"
+        value=""
+        placeholder="#45ac87"><br><br>
+        <a href="#" class="btn btn-success btn-sm" id="enviar">Cambiar Color</a>
+      </div>
+      <!-- Aqui esta el script de cambio de color -->
+      <script>
+
+        document.getElementById("enviar").addEventListener("click", function () {
+          var colorData = document.getElementById("color").value;
+          document.getElementById("parrafo").style.color = colorData;
+        });
+
+
+
+      </script>
+  </body>
+</html>
