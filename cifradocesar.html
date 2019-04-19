@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Cambiar color con JS</title>
+    <link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous">
+  </head>
+  <body >
+    <h1 id="titulo" class="text-center">Cifrado César</h1>
+    <div class="row">
+      <input type="text" name="" id="textoplano" class="col">
+      <div id="TextoCifrado" class="col">
+      </div>
+    </div>
+    <div class="text-center">
+      <a href="#" class="btn btn-success btn-lg" id="Cifrar">Cifrar</a>
+    </div>
+
+    <script type="text/javascript">
+      function cifradoCesar(str) { // LBH QVQ VG!
+        var decoded = [];
+        var array = str.split("");
+        for(var index = 0; index < array.length;index++){
+          var letra = array[index];
+          if      (letra == " ") { letraConvertida = " "; }
+          else if (letra == "A") { letraConvertida = "N"; }
+          else if (letra == "B") { letraConvertida = "O"; }
+          else if (letra == "C") { letraConvertida = "P"; }
+          else if (letra == "D") { letraConvertida = "Q"; }
+          else if (letra == "E") { letraConvertida = "R"; }
+          else if (letra == "F") { letraConvertida = "S"; }
+          else if (letra == "G") { letraConvertida = "T"; }
+          else if (letra == "H") { letraConvertida = "U"; }
+          else if (letra == "I") { letraConvertida = "V"; }
+          else if (letra == "J") { letraConvertida = "W"; }
+          else if (letra == "K") { letraConvertida = "X"; }
+          else if (letra == "L") { letraConvertida = "Y"; }
+          else if (letra == "M") { letraConvertida = "Z"; }
+          else if (letra == "N") { letraConvertida = "A"; }
+          else if (letra == "O") { letraConvertida = "B"; }
+          else if (letra == "P") { letraConvertida = "C"; }
+          else if (letra == "Q") { letraConvertida = "D"; }
+          else if (letra == "R") { letraConvertida = "E"; }
+          else if (letra == "S") { letraConvertida = "F"; }
+          else if (letra == "T") { letraConvertida = "G"; }
+          else if (letra == "U") { letraConvertida = "H"; }
+          else if (letra == "V") { letraConvertida = "I"; }
+          else if (letra == "W") { letraConvertida = "J"; }
+          else if (letra == "X") { letraConvertida = "K"; }
+          else if (letra == "Y") { letraConvertida = "L"; }
+          else if (letra == "Z") { letraConvertida = "M"; }
+          else                   { letraConvertida = "~"  }
+
+          decoded[index] = letraConvertida;
+
+        }
+        var decodedString = decoded.join("");
+        return decodedString;
+      }
+
+      document.getElementById('Cifrar').addEventListener('click',function(){
+        var textoACifrar = document.getElementById('textoplano').value
+        var textoCifrado = cifradoCesar(textoACifrar);
+        document.getElementById('TextoCifrado').innerHTML = textoCifrado
+      })
+    </script>
+  </body>
+</html>
